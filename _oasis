@@ -1,0 +1,10 @@
+OASISFormat: 0.4
+Name:        Count Lines
+Version:     0.0.1
+Synopsis:    Counts the number of lines in the project
+Authors:     Bogdan Nechyporenko
+License:     LGPL-2.1 with OCaml linking exception
+Executable "count-lines"
+  Path:       src
+  BuildTools: ocamlbuild
+  MainIs:     main.ml
