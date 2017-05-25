@@ -23,3 +23,26 @@ let dir_contents dir =
   in
   loop [] [dir]
 ;;
+
+let fold_file f x file_name =
+  let buffer = Bytes.create 1024 in
+  let file = open_in file_name in
+  let rec go a =
+    let length = input file buffer 0 (String.length buffer) in
+    let a' = f a (String.sub buffer 0 length) in
+    if length > 0 then go a' else a' in
+  let r = go x in
+  close_in file;
+  r;;
+
+let count_newlines s =
+  let rec go n i =
+    try
+      let i' = String.index_from s i '\n' in
+      go (n + 1) (i' + 1)
+    with Not_found -> n in
+  go 0 0;;
+
+let count_file_lines f =
+  fold_file (fun x s -> x + count_newlines s) 0 f
+;;
