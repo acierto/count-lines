@@ -7,4 +7,5 @@ License:     LGPL-2.1 with OCaml linking exception
 Executable "count-lines"
   Path:       src
   BuildTools: ocamlbuild
+  BuildDepends: str, oasis
   MainIs:     main.ml

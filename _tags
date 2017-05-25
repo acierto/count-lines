@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: f7a5d3303fd8c11b05b923652efab9b3)
+# DO NOT EDIT (digest: b5aea1a51dee851914fdbb6681dfd079)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -15,4 +15,8 @@ true: annot, bin_annot
 "_darcs": -traverse
 "_darcs": not_hygienic
 # Executable count-lines
+"src/main.byte": pkg_oasis
+"src/main.byte": pkg_str
+<src/*.ml{,i,y}>: pkg_oasis
+<src/*.ml{,i,y}>: pkg_str
 # OASIS_STOP

@@ -1,6 +1,5 @@
 open Dir ;;
 
-let () =
-  let results = Dir.dir_contents "/Users/bogdannechyporenko/proj/xld-ci-explorer" in
-  List.iter print_endline results;
-;;
+let printlist l = List.iter (fun x -> print_endline x) l;;
+
+printlist (Dir.dir_contents "/Users/bogdannechyporenko/proj/xld-ci-explorer");;
