@@ -1,4 +1,9 @@
+.idea/
 _build/
 *.byte
 *.log
 *.data
+
+a.out
+myocamlbuild.ml
+mytop
